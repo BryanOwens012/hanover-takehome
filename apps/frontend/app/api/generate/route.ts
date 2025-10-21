@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 import type { GenerateRequest, GenerateResponse, Citation } from '@/lib/types';
 
-export const runtime = 'edge';
-
 export const POST = async (req: NextRequest) => {
   try {
     const { query, sources, conversationHistory } = (await req.json()) as GenerateRequest;
