@@ -53,7 +53,7 @@ export const POST = async (req: NextRequest) => {
 3. Include inline citations using [1], [2], etc. to reference specific sources
 4. Only use information from the provided sources
 5. If the sources don't contain enough information, acknowledge this
-6. Write in a clear, informative style similar to Perplexity.ai
+6. Write in a clear, informative style similar to Simplexity.ai
 
 IMPORTANT: When citing sources, use the format [1], [2], etc. to reference the numbered sources provided.`;
 
@@ -66,7 +66,7 @@ Please provide a comprehensive answer to the user's question, using inline citat
 
     // Call Claude API
     const message = await anthropic.messages.create({
-      model: 'claude-3-5-sonnet-20241022',
+      model: 'claude-sonnet-4-5-20250929',
       max_tokens: 2048,
       system: systemPrompt,
       messages: [

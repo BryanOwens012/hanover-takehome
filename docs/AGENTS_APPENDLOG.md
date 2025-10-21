@@ -444,3 +444,38 @@ Followed by course correction:
 3. Verify citations click correctly
 4. Polish UI based on real usage
 5. Consider additional features (conversation history sidebar, loading states, error handling improvements)
+
+## 2025-10-20 18:26 PT - UI Polish: Cursor Pointer for Buttons
+
+**Type:** UI Enhancement
+**Change:** Added `cursor-pointer` class to all button elements across the application
+
+**Context:** User request:
+> "Give all buttons cursor-pointer"
+
+**Files Modified:**
+- `app/components/Sidebar.tsx` - Added cursor-pointer to 2 buttons (New Chat, Home nav)
+- `app/components/SearchInput.tsx` - Added cursor-pointer to 2 buttons (Search icon, Submit)
+- `app/components/TabNavigation.tsx` - Added cursor-pointer to 2 buttons (Perplexity tab, Sources tab)
+
+**Rationale:**
+- **UX Improvement**: Makes it immediately obvious which elements are clickable/interactive
+- **User Affordance**: Pointer cursor provides clear visual feedback that element is a button
+- **Consistency**: All buttons now have consistent hover behavior
+- **Accessibility**: Helps users distinguish between static text and interactive elements
+
+**Technical Details:**
+- Total of 6 buttons updated across 3 component files
+- Added `cursor-pointer` to existing className strings
+- No functionality changes, purely visual enhancement
+
+**Alternative Considered:**
+- Could rely on browser default cursor behavior for `<button>` elements
+- Rejected: Explicit `cursor-pointer` provides better consistency across browsers and is more obvious
+
+**Impact:**
+- Better user experience - clearer affordance for interactive elements
+- Minimal code change - single CSS class addition per button
+- No performance impact
+
+**Time Spent:** 5 minutes
